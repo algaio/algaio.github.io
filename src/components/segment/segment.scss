@@ -8,7 +8,7 @@
   padding-left: $padding;
   padding-right: $padding;
   @media #{$tablet, $mobile} {
-    height: auto;
+    height: 50vh;
   }
 }
 
@@ -18,7 +18,12 @@
     margin-bottom: 5%;
     margin-top: 40vh;
     @media #{$tablet} {
-      margin-top: 0vh;
+      margin-bottom: 5%;
+      margin-top: 20vh;
+    }
+    @media #{$mobile} {
+      height: 5vh;
+      justify-content: flex-end;
     }
   }
   &:nth-child(2) {
@@ -97,6 +102,9 @@
       color: #ffffff;
       text-align: right;
       @include h1();
+    }
+    @media #{$tablet, $mobile} {
+      align-items: flex-start;
     }
   }
   &.turquise {
