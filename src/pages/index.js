@@ -9,8 +9,10 @@ import './index.scss';
 
 const IndexPage = () => (
   <main className="app">
-    <SEO title="Home" />
-    <Link to="/page-2/">Go to page 2</Link>
+    <header>
+      <SEO title="Home" />
+      <Link to="/articles/">Articles</Link>
+    </header>
     <section>
       {segmentsData.segments.map(segment => (
         <Segment data={segment} key={segment.id} />
