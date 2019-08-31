@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Link } from 'gatsby';
+import Nav from '../components/nav/nav';
 import Segment from '../components/segment/segment';
 import SEO from '../components/seo';
 import segmentsData from '../data/segments.json';
@@ -9,10 +9,8 @@ import './index.scss';
 
 const IndexPage = () => (
   <main className="app">
-    <header>
-      <SEO title="Home" />
-      <Link to="/articles/">Articles</Link>
-    </header>
+    <SEO title="Home" />
+    <Nav />
     <section>
       {segmentsData.segments.map(segment => (
         <Segment data={segment} key={segment.id} />

@@ -13,8 +13,10 @@ code {
     monospace;
 }
 
-h1,
-p {
+@mixin h1() {
+  margin: 0;
+  padding: 0;
+  width: auto;
   font-weight: bold;
   @include fluid-type(
     $font_min_width,
@@ -22,20 +24,7 @@ p {
     $font_min_size,
     $font_max_size
   );
-}
-
-@mixin h1() {
-  margin: 0;
-  padding: 0;
-  width: $text-width;
-  @media #{$tablet} {
-    width: $text-width-tablet;
-  }
   @media #{$mobile} {
     text-align: left;
   }
-}
-@mixin h2() {
-  margin: 0;
-  padding: 0;
 }
