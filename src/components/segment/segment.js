@@ -33,24 +33,19 @@ class Segment extends React.Component {
     }
   }
   render() {
-    const { h1, style, className, sections } = this.props.data;
-    this.state.isMobile && this.cleanInputOfBreakpoints(h1);
+    const { h1, text, style, type } = this.props.data;
+    this.state.isMobile && this.cleanInputOfBreakpoints(text);
     return (
-      <article className={'Segment'} style={this.state.isDesktop ? style : {}}>
-        <header className={className || 'Segment__header'}>
-          {Array.isArray(h1) &&
-            h1.map(h1 => <h1 key={h1}>{ReactHtmlParser(h1)}</h1>)}
-          {typeof h1 === 'string' && <h1>{ReactHtmlParser(h1)}</h1>}
-        </header>
-        <section className={'Segment__section-container'}>
-          {sections &&
-            sections.map(section => (
-              <section className={'Segment__section'} key={section.id}>
-                {section.title}
-              </section>
-            ))}
-        </section>
-        <footer />
+      <article
+        className={`Segment ${type || ''}`}
+        style={this.state.isDesktop ? style : {}}
+      >
+        {h1 && <h1 className="h1">{ReactHtmlParser(h1)}</h1>}
+        {text.map((text, index) => (
+          <p className="h1" key={`paragraph__${index}__${text}`}>
+            {ReactHtmlParser(text)}
+          </p>
+        ))}
       </article>
     );
   }

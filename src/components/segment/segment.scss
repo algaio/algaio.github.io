@@ -10,30 +10,20 @@
   @media #{$tablet, $mobile} {
     height: auto;
   }
-  @media #{$mobile} {
-    // padding-right: 0px;
-  }
-  & > * {
-    width: 100%;
-    height: auto;
-    flex: auto 0 0;
-  }
 }
 
 .Segment {
   &:first-child {
-    justify-content: flex-end;
+    height: auto;
     margin-bottom: 5%;
-    margin-top: 20vh;
-    height: 40vh;
+    margin-top: 40vh;
     @media #{$tablet} {
       margin-top: 0vh;
     }
   }
   &:nth-child(2) {
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 40vh;
+    height: auto;
+    margin-bottom: $padding;
     @media #{$tablet} {
       height: auto;
       margin-bottom: 10%;
@@ -91,73 +81,29 @@
   }
 }
 
-.Segment__header {
-  h1 {
-    color: #00a8e8;
-    text-align: left;
-    width: $text-width;
-    @media #{$tablet} {
-      width: $text-width-tablet;
-    }
-    @media #{$mobile} {
-      width: $text-width;
-    }
-  }
-}
-
-.Segment__header--alt {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-end;
-  h1 {
-    color: #ffffff;
-    text-align: right;
-    width: $text-width;
-    @media #{$tablet} {
-      width: $text-width-tablet;
-    }
-  }
-  @media #{$mobile} {
-    h1 {
-      color: #ffffff;
-      width: $text-width;
+.Segment {
+  &.indigo {
+    & > * {
+      color: #00a8e8;
       text-align: left;
+      @include h1();
     }
   }
-}
-
-.Segment__header--last {
-  h1 {
-    color: #003459;
-    text-align: left;
-    width: $text-width;
-    @media #{$tablet} {
-      width: $text-width-tablet;
-    }
-    @media #{$mobile} {
-      width: $text-width;
+  &.navy {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    & > * {
+      color: #ffffff;
+      text-align: right;
+      @include h1();
     }
   }
-}
-
-.Segment__section-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100vh;
-}
-
-.Segment__section {
-  height: 80vh;
-  grid-column: auto;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-
-  &:nth-child(odd) {
-    background-color: aquamarine;
-  }
-
-  &:nth-child(even) {
-    background-color: #cecece;
+  &.turquise {
+    & > * {
+      color: #003459;
+      text-align: left;
+      @include h1();
+    }
   }
 }
