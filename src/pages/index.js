@@ -2,13 +2,13 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
 import Segment from '../components/segment/segment';
-import segmentsData from '../data/segments.json';
+import { segments } from '../data/indexContent.json';
 import '../styles/__index.scss';
 
 const IndexPage = () => (
   <Layout>
     <section>
-      {segmentsData.segments.map(segment => (
+      {segments.map(segment => (
         <Segment data={segment} key={segment.id} />
       ))}
     </section>
