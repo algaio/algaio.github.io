@@ -1,0 +1,48 @@
+html {
+  scroll-behavior: smooth;
+  @include fluid-type(
+    $font_min_width,
+    $font_max_width,
+    $font_min_size,
+    $font_max_size
+  );
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  // @media #{$tablet} {
+  //   font-size: 2.5em;
+  // }
+  // @media #{$mobile} {
+  //   font-size: 1.5em;
+  // }
+}
+h2 {
+  font-size: 1.5em;
+}
+
+a {
+  color: #f4fffd;
+  &:hover {
+    color: #f4fffdc7;
+  }
+}
