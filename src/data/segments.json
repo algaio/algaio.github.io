@@ -1,0 +1,57 @@
+{
+  "title": "Segment data",
+  "segments": [
+    {
+      "id": "segment-1",
+      "h1": [
+        "I am Alan Ionita.",
+        "A Software Developer from<br/>sunny Manchester. ☀️"
+      ]
+    },
+    {
+      "id": "segment-2",
+      "h1": [
+        "Currently working at <a href='https://www.hiddenltd.com' target='_blank' rel='noopener noreferrer'>Hidden</a>.",
+        "Designing digital experiences<br/>for big engineering brands."
+      ]
+    },
+    {
+      "id": "segment-3",
+      "className": "Segment__header--alt",
+      "h1": ["Experience with: ", "Web. Backend. Embedded. Strategy."]
+    },
+    {
+      "id": "segment-4",
+      "className": "Segment__header--last",
+      "h1": [
+        "Mentor at <a href='https://codebar.io/' target='_blank' rel='noopener noreferrer'>Codebar</a>.",
+        "Non-profit programming workshops<br/>for diverse communities."
+      ]
+    },
+    {
+      "id": "segment-5",
+      "className": "Segment__header--last",
+      "h1": [
+        "Organiser at <a href='https://codeyourfuture.io/' target='_blank' rel='noopener noreferrer'>CodeYourFuture</a>.",
+        "A non-profit coding school for refugees."
+      ]
+    },
+    {
+      "id": "segment-6",
+      "className": "Segment__header--last",
+      "h1": [
+        "Graduate and mentor at <a href='https://northcoders.com/' target='_blank' rel='noopener noreferrer'>Northcoders</a>.",
+        "UK's leading coding school."
+      ]
+    },
+    {
+      "id": "segment-7",
+      "className": "Segment__header--alt",
+      "h1": [
+        "Discover more on: ",
+        "<a href='https://www.linkedin.com/in/alanionita/' target='_blank' rel='noopener noreferrer'>LinkedIn</a>.",
+        "<a href='https://github.com/alanionita' target='_blank' rel='noopener noreferrer'>Github</a>."
+      ]
+    }
+  ]
+}
