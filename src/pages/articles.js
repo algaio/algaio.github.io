@@ -8,7 +8,7 @@ import SEO from '../components/seo';
 
 const Articles = ({ location }) => (
   <Layout {...location}>
-    <SEO title="Page two" />
+    <SEO title="Articles" />
     <section>
       {content.map(segment => (
         <Segment data={segment} key={segment.id} />
