@@ -4,7 +4,12 @@
     {
       "id": "segment-1",
       "type": "indigo",
-      "h1": "Cristalising throughts, through writing"
+      "text": ["Crystallising throughts,<br/>through writing:"]
+    },
+    {
+      "id": "segment-1",
+      "type": "turquise",
+      "text": ["No available articles, <br/>but stay tuned"]
     }
   ]
 }

@@ -4,48 +4,32 @@
     {
       "id": "segment-1",
       "type": "indigo",
-      "h1": "I am Alan Ionita.",
-      "text": ["A Software Developer from<br/>sunny Manchester. ☀️"]
-    },
-    {
-      "id": "segment-2",
-      "type": "indigo",
       "text": [
+        "I am Alan Ionita.",
+        "A Software Developer from<br/>sunny Manchester. ☀️",
         "Currently working at <a href='https://www.hiddenltd.com' target='_blank' rel='noopener noreferrer'>Hidden</a>.",
         "Designing digital experiences<br/>for big engineering brands."
       ]
     },
     {
-      "id": "segment-3",
+      "id": "segment-2",
       "type": "navy",
       "text": ["Experience with: ", "Web. Backend. Embedded. Strategy."]
     },
     {
-      "id": "segment-4",
+      "id": "segment-3",
       "type": "turquise",
       "text": [
         "Mentor at <a href='https://codebar.io/' target='_blank' rel='noopener noreferrer'>Codebar</a>.",
-        "Non-profit programming workshops<br/>for diverse communities."
-      ]
-    },
-    {
-      "id": "segment-5",
-      "type": "turquise",
-      "text": [
+        "Non-profit programming workshops<br/>for diverse communities.",
         "Organiser at <a href='https://codeyourfuture.io/' target='_blank' rel='noopener noreferrer'>CodeYourFuture</a>.",
-        "A non-profit coding school for refugees."
-      ]
-    },
-    {
-      "id": "segment-6",
-      "type": "turquise",
-      "text": [
+        "A non-profit coding school for refugees.",
         "Graduate and mentor at <a href='https://northcoders.com/' target='_blank' rel='noopener noreferrer'>Northcoders</a>.",
         "UK's leading coding school."
       ]
     },
     {
-      "id": "segment-7",
+      "id": "segment-4",
       "type": "navy",
       "text": [
         "Discover more on: ",
