@@ -2,16 +2,19 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout/layout';
-
+import Segment from '../components/segment/segment';
+import { content } from '../data/articlesContent.json';
 import SEO from '../components/seo';
 
-const SecondPage = () => (
-  <Layout>
+const Articles = ({ location }) => (
+  <Layout {...location}>
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <section>
+      {content.map(segment => (
+        <Segment data={segment} key={segment.id} />
+      ))}
+    </section>
   </Layout>
 );
 
-export default SecondPage;
+export default Articles;

@@ -4,10 +4,10 @@ import Nav from '../nav/nav';
 import SEO from '../seo';
 import './layout.scss';
 
-export default ({ children }) => (
+export default ({ children, pathname }) => (
   <main className="layout">
     <SEO title="Home" />
-    <Nav />
+    <Nav pathname={pathname} />
     {children}
   </main>
 );

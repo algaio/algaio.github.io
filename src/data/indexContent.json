@@ -1,6 +1,6 @@
 {
   "title": "Segment data",
-  "segments": [
+  "content": [
     {
       "id": "segment-1",
       "type": "indigo",
