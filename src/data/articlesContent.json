@@ -9,6 +9,18 @@
     {
       "id": "segment-1",
       "type": "turquise",
+      "list": [
+        {
+          "href": "/test",
+          "text": "This is a test",
+          "date": "6th October 2019"
+        },
+        {
+          "href": "/test-2",
+          "text": "This is a second test",
+          "date": "6th October 2019"
+        }
+      ],
       "text": ["No available articles, <br/>but stay tuned!"]
     }
   ]

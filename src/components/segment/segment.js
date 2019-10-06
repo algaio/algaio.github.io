@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import List from '../list/list.js';
 import './segment.scss';
 
 class Segment extends React.Component {
@@ -33,7 +34,7 @@ class Segment extends React.Component {
     }
   }
   render() {
-    const { h1, text, style, type } = this.props.data;
+    const { h1, list, text, style, type } = this.props.data;
     this.state.isMobile && text && this.cleanInputOfBreakpoints(text);
     return (
       <article
@@ -41,12 +42,13 @@ class Segment extends React.Component {
         style={this.state.isDesktop ? style : {}}
       >
         {h1 && <h1 className="h1">{ReactHtmlParser(h1)}</h1>}
-        {text &&
+        {!list && text &&
           text.map((text, index) => (
             <p className="h1" key={`paragraph__${index}__${text}`}>
               {ReactHtmlParser(text)}
             </p>
           ))}
+        {list && <List list={list} />}
       </article>
     );
   }
