@@ -11,13 +11,13 @@
       "type": "turquise",
       "list": [
         {
-          "href": "/test",
-          "text": "This is a test",
-          "date": "6th October 2019"
+          "href": "/article/?id=1",
+          "text": "Article Test 1",
+          "date": "5th October 2019"
         },
         {
-          "href": "/test-2",
-          "text": "This is a second test",
+          "href": "/article/?id=2",
+          "text": "Article Test 2",
           "date": "6th October 2019"
         }
       ],

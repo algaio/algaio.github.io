@@ -1,0 +1,27 @@
+{
+  "title": "Segment data",
+  "list": [
+    {
+      "id": "1",
+      "title": "Article Test 1",
+      "content": [
+        {
+          "id": "segment-1",
+          "type": "indigo",
+          "text": ["Article Test 1."]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Article Test 2",
+      "content": [
+        {
+          "id": "segment-1",
+          "type": "indigo",
+          "text": ["Article Test 2."]
+        }
+      ]
+    }
+  ]
+}
