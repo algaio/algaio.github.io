@@ -1,6 +1,8 @@
 @import "../../styles/_index";
 
 .nav {
+  display: none;
+  visibility: hidden;
   width: auto;
   height: 10vh;
   text-align: right;
