@@ -1,4 +1,4 @@
-export type PostData = {
+export type Post = {
   [index: string]: string | null | undefined;
   id: string;
   content: string;
@@ -7,4 +7,4 @@ export type PostData = {
   contentHtml?: string;
 };
 
-export type PostsData = Array<PostData>;
+export type Posts = Array<Post>;
