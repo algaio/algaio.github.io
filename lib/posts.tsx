@@ -3,15 +3,15 @@ import path from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
-import { PostsData, PostData } from "../types/posts";
+import { Posts, Post } from "../types/posts";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getSortedPostsData(): PostsData {
+export function getSortedPosts(): Posts {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map(
-    (fileName: string): PostData => {
+  const allPosts = fileNames.map(
+    (fileName: string): Post => {
       // Remove ".md" from file name to get id
       const id = fileName.replace(/\.md$/, "");
 
@@ -26,11 +26,11 @@ export function getSortedPostsData(): PostsData {
       return {
         id,
         ...matterResult.data,
-      } as PostData;
+      } as Post;
     }
   );
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
+  return allPosts.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -50,7 +50,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id: string) {
+export async function getPost(id: string | Array<string>) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
@@ -68,5 +68,5 @@ export async function getPostData(id: string) {
     id,
     contentHtml,
     ...matterResult.data,
-  } as PostData;
+  } as Post;
 }
