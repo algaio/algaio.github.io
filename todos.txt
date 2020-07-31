@@ -1,9 +1,5 @@
 # Replatforming Tasks
 
-TODO: Setup Typescript
-
-TODO: Fix types
-
 TODO: Add the old homepage from Gatsby
 
 TODO: Test the static build
