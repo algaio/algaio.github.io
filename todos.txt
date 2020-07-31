@@ -1,0 +1,15 @@
+# Replatforming Tasks
+
+TODO: Setup Typescript
+
+TODO: Fix types
+
+TODO: Add the old homepage from Gatsby
+
+TODO: Test the static build
+
+TODO: Deploy using github actions and git hooks
+
+FIX: Styling loads loads too late so the CLS (Cumulative Layout Shift) doesn't seem right.
+
+TODO: Adds the rest of the pages from Gatsby
