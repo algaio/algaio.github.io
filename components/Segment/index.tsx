@@ -1,21 +1,30 @@
-// import ReactHtmlParser from "react-html-parser";
-// import List from "../List";
+import { FunctionComponent, ReactNode } from "react";
 import styles from "./segment.module.css";
-// import utilStyles from "../../styles/utils.module.css";
 
 interface Props {
-  contentHtml: string;
+  contentHtml?: string;
   id?: string;
   type: string;
+  children?: ReactNode;
 }
 
-const Segment = (props: Props) => {
-  console.log(props);
+const Segment: FunctionComponent<Props> = ({
+  contentHtml,
+  children,
+  type,
+}: Props) => {
   return (
-    <article
-      className={styles[props.type] || styles.main}
-      dangerouslySetInnerHTML={{ __html: props.contentHtml }}
-    />
+    <>
+      {contentHtml && (
+        <section
+          className={styles[type] || styles.main}
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
+      )}
+      {!contentHtml && (
+        <section className={styles[type] || styles.main}>{children}</section>
+      )}
+    </>
   );
 };
 
