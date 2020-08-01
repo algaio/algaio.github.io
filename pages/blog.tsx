@@ -1,58 +1,50 @@
 // Modules
 import Head from "next/head";
-// import Link from "next/link";
 
 // Components
-// import Date from "../components/Date";
 import Layout, { siteTitle } from "../components/Layout";
+import List from "../components/List";
 import Segment from "../components/Segment";
 
 // Data
+import { getSortedPosts } from "../lib/posts";
 import { getSortedSegments } from "../lib/segments";
 
 // TS
 import { Segments } from "../types/segments";
+import { Posts } from "../types/posts";
 import { GetStaticProps } from "next";
 
-// Styles
-// import utilStyles from "../styles/utils.module.css";
-
-export default function Blog({ allSegments }: { allSegments: Segments }) {
+export default function Blog({
+  segments,
+  posts,
+}: {
+  segments: Segments;
+  posts: Posts;
+}) {
+  console.log("posts", posts);
   return (
     <Layout home={false}>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        {allSegments.map((segment: any) => (
-          <Segment {...segment} key={segment.id} />
-        ))}
-      </section>
-      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPosts.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href='/posts/[id]' as={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section> */}
+      {segments.map((segment: any) => (
+        <Segment {...segment} key={segment.id} />
+      ))}
+      <Segment type="turquise">
+        <List list={posts} />
+      </Segment>
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allSegments = await getSortedSegments("blog");
+  const segments = await getSortedSegments("blog");
+  const posts = getSortedPosts();
   return {
     props: {
-      allSegments,
+      segments,
+      posts,
     },
   };
 };
