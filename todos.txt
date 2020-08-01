@@ -1,5 +1,3 @@
 # Replatforming Tasks
 
-TODO: Deploy using github actions and git hooks
-
 FIX: Styling loads loads too late so the CLS (Cumulative Layout Shift) doesn't seem right.
