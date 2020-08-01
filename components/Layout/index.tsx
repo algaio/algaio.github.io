@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 import Head from "next/head";
-import styles from "./layout.module.css";
-import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
-
+import styles from "./layout.module.css";
+import Nav from "../Nav";
+import utilStyles from "../../styles/utils.module.css";
 const name = "[Your Name]";
 export const siteTitle = "Next.js Sample Website";
 
@@ -12,6 +12,9 @@ type LayoutProps = {
 };
 
 const Layout: FunctionComponent<LayoutProps> = ({ children, home }) => {
+  const LinkProps = {
+    href: "/",
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -32,6 +35,9 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, home }) => {
       <header className={styles.header}>
         {home ? (
           <>
+            <Nav>
+              <Link {...LinkProps}>Home</Link>
+            </Nav>
             <img
               src='/images/profile.jpg'
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}

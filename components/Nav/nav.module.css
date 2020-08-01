@@ -1,0 +1,9 @@
+.main {
+  width: auto;
+  height: 10vh;
+  text-align: right;
+  background-color: transparent;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  margin-top: 5vh;
+}
