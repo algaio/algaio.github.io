@@ -1,15 +1,15 @@
-import { GetStaticProps, GetStaticPaths } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import Date from "../components/Date";
+// import Link from "next/link";
+// import Date from "../components/Date";
 import Segment from "../components/Segment";
 import Layout, { siteTitle } from "../components/Layout";
-import { getSortedPosts } from "../lib/posts";
-import { Posts } from "../types/posts";
-import { content } from "../data/indexContent.json";
+import { getSortedSegments } from "../lib/segments";
+import { Segments } from "../types/segments";
 import utilStyles from "../styles/utils.module.css";
 
-export default function Home({ allPosts }: { allPosts: Posts }) {
+export default function Home({ allSegments }: { allSegments: Segments }) {
+  console.log("allSegments", allSegments);
   return (
     <Layout home>
       <Head>
@@ -24,19 +24,19 @@ export default function Home({ allPosts }: { allPosts: Posts }) {
         
       </section> */}
       <section>
-          {content.map((segment) => (
-            <Segment data={segment} key={segment.id} />
-          ))}
-        </section>
+        {allSegments.map((segment) => (
+          <Segment {...segment} key={segment.id} />
+        ))}
+      </section>
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPosts: Posts = getSortedPosts();
+  const allSegments = await getSortedSegments("home");
   return {
     props: {
-      allPosts,
+      allSegments,
     },
   };
 };

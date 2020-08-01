@@ -1,32 +1,31 @@
 // Modules
 import Head from "next/head";
-import Link from "next/link";
+// import Link from "next/link";
 
 // Components
-import Date from "../components/Date";
+// import Date from "../components/Date";
 import Layout, { siteTitle } from "../components/Layout";
 import Segment from "../components/Segment";
 
 // Data
-import { getSortedPosts } from "../lib/posts";
-import { content } from "../data/blogContent.json";
+import { getSortedSegments } from "../lib/segments";
 
 // TS
-import { Posts } from "../types/posts";
+import { Segments } from "../types/segments";
 import { GetStaticProps } from "next";
 
 // Styles
-import utilStyles from "../styles/utils.module.css";
+// import utilStyles from "../styles/utils.module.css";
 
-export default function Blog({ allPosts }: { allPosts: Posts }) {
+export default function Blog({ allSegments }: { allSegments: Segments }) {
   return (
     <Layout home={false}>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section>
-        {content.map((segment: any) => (
-          <Segment data={segment} key={segment.id} />
+        {allSegments.map((segment: any) => (
+          <Segment {...segment} key={segment.id} />
         ))}
       </section>
       {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -50,10 +49,10 @@ export default function Blog({ allPosts }: { allPosts: Posts }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPosts: Posts = getSortedPosts();
+  const allSegments = await getSortedSegments("blog");
   return {
     props: {
-      allPosts,
+      allSegments,
     },
   };
 };
