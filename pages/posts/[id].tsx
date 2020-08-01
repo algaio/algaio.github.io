@@ -4,9 +4,9 @@ import { getAllPostIds, getPost } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/Date";
 import utilStyles from "../../styles/utils.module.css";
-import { Post } from "../../types/posts";
+import * as PostTypes from "../../types/posts";
 
-export default function Post({ Post }: { Post: Post }) {
+export default function Post({ Post }: { Post: PostTypes.Post }) {
   return (
     <Layout home={false}>
       <Head>

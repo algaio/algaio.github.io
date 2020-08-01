@@ -1,11 +1,22 @@
-import { GetStaticProps, GetStaticPaths } from "next";
+// Modules
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/Layout";
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPosts } from "../lib/posts";
 import Link from "next/link";
+
+// Components
 import Date from "../components/Date";
+import Layout, { siteTitle } from "../components/Layout";
+import Segment from "../components/Segment";
+
+// Data
+import { getSortedPosts } from "../lib/posts";
+import { content } from "../data/blogContent.json";
+
+// TS
 import { Posts } from "../types/posts";
+import { GetStaticProps } from "next";
+
+// Styles
+import utilStyles from "../styles/utils.module.css";
 
 export default function Blog({ allPosts }: { allPosts: Posts }) {
   return (
@@ -13,7 +24,12 @@ export default function Blog({ allPosts }: { allPosts: Posts }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section>
+        {content.map((segment: any) => (
+          <Segment data={segment} key={segment.id} />
+        ))}
+      </section>
+      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPosts.map(({ id, date, title }) => (
@@ -28,7 +44,7 @@ export default function Blog({ allPosts }: { allPosts: Posts }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </Layout>
   );
 }

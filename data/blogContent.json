@@ -1,0 +1,27 @@
+{
+  "title": "Segment data",
+  "content": [
+    {
+      "id": "segment-1",
+      "type": "indigo",
+      "text": ["Crystallising throughts,<br/>through writing."]
+    },
+    {
+      "id": "segment-1",
+      "type": "turquise",
+      "list": [
+        {
+          "href": "/article/?id=1",
+          "text": "Article Test 1",
+          "date": "5th October 2019"
+        },
+        {
+          "href": "/article/?id=2",
+          "text": "Article Test 2",
+          "date": "6th October 2019"
+        }
+      ],
+      "text": ["No available articles, <br/>but stay tuned!"]
+    }
+  ]
+}
