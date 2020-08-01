@@ -1,11 +1,13 @@
 {
-  "name": "my-app",
+  "name": "portfolio-site--alan-ionita",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "preexport": "npm run build",
+    "export": "next export"
   },
   "dependencies": {
     "date-fns": "^2.11.1",
