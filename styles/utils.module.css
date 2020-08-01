@@ -3,6 +3,7 @@
   padding: 0;
   width: auto;
   font-weight: bold;
+  font-size: var(--fluid-0);
   /* @include fluid-type(
     $font_min_width,
     $font_max_width,
@@ -12,6 +13,28 @@
   @media #{$mobile} {
     text-align: left;
   } */
+}
+.h1:nth-of-type(2n) {
+  margin-bottom: 5vh;
+  /* @media #{$tablet} {
+    margin-bottom: 2.5vh;
+  }
+  @media #{$mobile} {
+    margin-bottom: 5vh;
+  } */
+}
+.h1:last-of-type {
+  margin-bottom: 0;
+}
+
+.h1 > a {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-weight: bold;
+  font-size: var(--fluid-0);
+  text-decoration: underline;
+  margin-bottom: 0;
 }
 
 .heading2Xl {
