@@ -1,3 +1,19 @@
+.h1 {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-weight: bold;
+  /* @include fluid-type(
+    $font_min_width,
+    $font_max_width,
+    $font_min_size,
+    $font_max_size
+  );
+  @media #{$mobile} {
+    text-align: left;
+  } */
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
