@@ -1,0 +1,17 @@
+.main {
+  width: auto;
+  height: 10vh;
+  text-align: right;
+  background-color: transparent;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  margin-top: 5vh;
+}
+
+.main > a {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-weight: bold;
+  font-size: var(--fluid-0);
+}

@@ -1,0 +1,7 @@
+/* CSS Variables */
+:root {
+    /* Vars */
+    --padding: 10vw;
+    --text-width: 100%;
+    --text-width-tablet: 90%;
+  }
