@@ -11,7 +11,7 @@ import { getSortedSegments } from "../lib/segments";
 // TS
 import { Segments } from "../types/segments";
 
-export const Home = ({ allSegments }: { allSegments: Segments }) => (
+export default ({ allSegments }: { allSegments: Segments }) => (
   <Layout home>
     <Head>
       <title>{siteTitle}</title>
