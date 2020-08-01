@@ -11,16 +11,16 @@ import { getSortedSegments } from "../lib/segments";
 // TS
 import { Segments } from "../types/segments";
 
-export default ({ allSegments }: { allSegments: Segments }) => (
-  <Layout home>
+export default function Home({ allSegments }: { allSegments: Segments }) {
+  return <Layout home>
     <Head>
       <title>{siteTitle}</title>
     </Head>
     {allSegments.map((segment) => (
       <Segment {...segment} key={segment.id} />
     ))}
-  </Layout>
-);
+  </Layout>;
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   const allSegments = await getSortedSegments("home");

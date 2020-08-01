@@ -5,8 +5,8 @@ type: "indigo"
 
 I am Alan Ionita.,
 
-A Software Developer from<br/>sunny Manchester. ☀️,
+A Software Developer from<br/>sunny Manchester. ☀️
 
-Currently working at [Mission Labs](https://www.missionlabs.co.uk/),
+Currently working at [Mission Labs](https://www.missionlabs.co.uk/)
 
 Building clever contact center solutions.
