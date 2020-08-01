@@ -12,9 +12,11 @@ jobs:
         with: 
           persist-credentials: false
       - name: Install and build
-        run: npm ci && npm run export
+        run: | 
+          npm ci
+          npm run export
       - name: Deploy 
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@3.5.9
         with: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
