@@ -38,24 +38,24 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, home }) => {
             <Nav>
               <Link href='/blog'>Blog</Link>
             </Nav>
-            <img
+            {/* <img
               src='/images/profile.jpg'
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
           </>
         ) : (
           <>
             <Nav>
               <Link href='/'>Home</Link>
             </Nav>
-            <img
+            {/* <img
               src='/images/profile.jpg'
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
             {/* <h2 className={utilStyles.headingLg}>
               <Link href='/'>
                 <a className={utilStyles.colorInherit}>{name}</a>
