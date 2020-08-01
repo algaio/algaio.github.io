@@ -2,7 +2,7 @@ export type Segment = {
     [index: string]: string | null | undefined;
     id: string;
     content: string;
-    type: "indigo" | "navy" | "turquise";
+    type: "indigo" | "navy" | "turquise" | "blog";
     contentHtml: string;
   };
   

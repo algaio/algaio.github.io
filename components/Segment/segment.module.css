@@ -122,3 +122,35 @@
 .turquise > p:last-child {
   margin-bottom: 0;
 }
+
+.blog {
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  padding-top: 20vh;
+  padding-bottom: var(--padding);
+  background-color: #00171f;
+  /* @media #{$tablet} {
+    padding-top: 10vh;
+    padding-bottom: 7.5vh;
+  } */
+  /* @media #{$mobile} {
+    padding-top: 10vh;
+    padding-bottom: 7.5vh;
+    justify-content: flex-end;
+  } */
+
+  /* @include space-between-p-tags(); */
+}
+
+.blog > p {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  color: #00a8e8;
+  text-align: right;
+  font-weight: bold;
+  font-size: var(--fluid-0);
+}
