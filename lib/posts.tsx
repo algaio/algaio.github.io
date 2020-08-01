@@ -5,7 +5,7 @@ import remark from "remark";
 import html from "remark-html";
 import { Posts, Post } from "../types/posts";
 
-const postsDirectory = path.join(process.cwd(), "posts");
+const postsDirectory = path.join(process.cwd(), "data", "posts");
 
 export function getSortedPosts(): Posts {
   // Get file names under /posts
@@ -61,6 +61,7 @@ export async function getPost(id: string | Array<string>) {
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
+  
   const contentHtml = processedContent.toString();
 
   // Combine the data with the id and contentHtml
