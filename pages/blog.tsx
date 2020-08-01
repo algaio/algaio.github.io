@@ -31,9 +31,7 @@ export default function Blog({
       {segments.map((segment: any) => (
         <Segment {...segment} key={segment.id} />
       ))}
-      <Segment type="turquise">
-        <List list={posts} />
-      </Segment>
+      <List list={posts} />
     </Layout>
   );
 }

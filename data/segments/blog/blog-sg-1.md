@@ -1,6 +1,6 @@
 ---
 id: "blog-sg-1"
-type: "indigo"
+type: "blog"
 ---
 
 Crystallising throughts, 
