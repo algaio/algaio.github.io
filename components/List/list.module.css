@@ -1,9 +1,19 @@
-/* @import "../../styles/_index"; */
-
+.main {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  height: auto;
+  margin: 0;
+  padding: var(--padding);
+  background-color: #007ea7;
+  list-style: none;
+  text-align: right;
+}
 .item {
   display: flex;
-  flex-flow: row;
-  align-items: center;
+  flex-flow: column;
+  align-items: flex-start;
+  font-size: var(--fluid-0);
 }
 
 .item > p,

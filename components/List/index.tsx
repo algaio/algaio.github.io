@@ -1,24 +1,19 @@
 import Link from "next/link";
 import { Posts } from "../../types/posts";
-
-// Components
 import Date from "../Date";
-
-// Styles
 import styles from "./list.module.css";
-import utilStyles from "../../styles/utils.module.css";
 
 const List = ({ list }: { list: Posts }) => (
   <>
     {list && (
-      <ul className={utilStyles.list}>
+      <ul className={styles.main}>
         {list.map(({ id, date, title }) => (
-          <li className={utilStyles.listItem} key={id}>
+          <li className={styles.item} key={id}>
             <Link href='/posts/[id]' as={`/posts/${id}`}>
               <a>{title}</a>
             </Link>
             <br />
-            <small className={utilStyles.lightText}>
+            <small>
               <Date dateString={date} />
             </small>
           </li>
