@@ -35,10 +35,18 @@
   /* @include space-between-p-tags(); */
 }
 
-.indigo > * {
+.indigo > p {
+  margin: 0;
+  padding: 0;
+  width: auto;
   color: #00a8e8;
   text-align: left;
-  /* @include h1(); */
+  font-weight: bold;
+  font-size: var(--fluid-0);
+}
+
+.indigo > p:nth-child(2) {
+  margin-bottom: 1.5em;
 }
 
 .navy {
@@ -67,10 +75,14 @@
       align-items: flex-start;
     } */
 }
-.navy > * {
+.navy > p {
+  margin: 0;
+  padding: 0;
+  width: auto;
   color: #ffffff;
   text-align: right;
-  /* @include h1(); */
+  font-weight: bold;
+  font-size: var(--fluid-0);
 }
 
 .turquise {
@@ -93,8 +105,20 @@
       padding-bottom: 7.5vh;
     } */
 }
-.turquise > * {
+.turquise > p {
+  margin: 0;
+  padding: 0;
+  width: auto;
   color: #003459;
   text-align: left;
-  /* @include h1(); */
+  font-weight: bold;
+  font-size: var(--fluid-0);
+}
+
+.turquise > p:nth-child(2n) {
+  margin-bottom: 1.5em;
+}
+
+.turquise > p:last-child {
+  margin-bottom: 0;
 }
