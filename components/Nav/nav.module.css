@@ -7,3 +7,11 @@
   padding-right: var(--padding);
   margin-top: 5vh;
 }
+
+.main > a {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-weight: bold;
+  font-size: var(--fluid-0);
+}
