@@ -1,0 +1,21 @@
+/* @import "../../styles/_index"; */
+
+.item {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.item > p,
+.item > a {
+  text-align: left;
+  /* @include h1(); */
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-weight: bold;
+}
+
+.item > p {
+  color: #003459;
+}
