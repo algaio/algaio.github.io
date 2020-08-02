@@ -3,8 +3,10 @@ import Layout from "../../components/Layout";
 import { getAllPostIds, getPost } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/Date";
+import Segment from "../../components/Segment";
 import utilStyles from "../../styles/utils.module.css";
 import * as PostTypes from "../../types/posts";
+import segmentStyles from "../../components/Segment/segment.module.css";
 
 export default function Post({ Post }: { Post: PostTypes.Post }) {
   return (
@@ -13,12 +15,15 @@ export default function Post({ Post }: { Post: PostTypes.Post }) {
         <title>{Post.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{Post.title}</h1>
-        <div className={utilStyles.lightText}>
+        <Segment type='postHeadline'>
+          <h1>{Post.title}</h1>
           <Date dateString={Post.date} />
-        </div>
+        </Segment>
         {Post.contentHtml && (
-          <div dangerouslySetInnerHTML={{ __html: Post.contentHtml }} />
+          <section
+            className={segmentStyles.post}
+            dangerouslySetInnerHTML={{ __html: Post.contentHtml }}
+          />
         )}
       </article>
     </Layout>
