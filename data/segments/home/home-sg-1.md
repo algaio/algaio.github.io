@@ -3,7 +3,7 @@ id: "home-sg-1"
 type: "indigo"
 ---
 
-I am Alan Ionita.,
+I'm Alan Ionita
 
 A Software Developer from<br/>sunny Manchester. ☀️
 
