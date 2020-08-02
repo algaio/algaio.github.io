@@ -13,7 +13,7 @@
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  font-size: var(--fluid-0);
+  font-size: var(--fluid-type);
 }
 
 .item > p,

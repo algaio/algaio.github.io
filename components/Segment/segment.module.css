@@ -42,7 +42,7 @@
   color: #00a8e8;
   text-align: left;
   font-weight: bold;
-  font-size: var(--fluid-0);
+  font-size: var(--fluid-type);
 }
 
 .indigo > p:nth-child(2) {
@@ -82,7 +82,7 @@
   color: #ffffff;
   text-align: right;
   font-weight: bold;
-  font-size: var(--fluid-0);
+  font-size: var(--fluid-type);
 }
 
 .turquise {
@@ -112,7 +112,7 @@
   color: #003459;
   text-align: left;
   font-weight: bold;
-  font-size: var(--fluid-0);
+  font-size: var(--fluid-type);
 }
 
 .turquise > p:nth-child(2n) {
@@ -152,5 +152,5 @@
   color: #00a8e8;
   text-align: right;
   font-weight: bold;
-  font-size: var(--fluid-0);
+  font-size: var(--fluid-type);
 }

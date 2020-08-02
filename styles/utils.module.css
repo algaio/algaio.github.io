@@ -3,7 +3,7 @@
   padding: 0;
   width: auto;
   font-weight: bold;
-  font-size: var(--fluid-0);
+  font-size: var(--fluid-type);
   /* @include fluid-type(
     $font_min_width,
     $font_max_width,
@@ -32,7 +32,7 @@
   padding: 0;
   width: auto;
   font-weight: bold;
-  font-size: var(--fluid-0);
+  font-size: var(--fluid-type);
   text-decoration: underline;
   margin-bottom: 0;
 }
