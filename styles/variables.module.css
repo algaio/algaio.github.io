@@ -2,6 +2,7 @@
 :root {
     /* Vars */
     --padding: 10vw;
+    --text-padding: 24px;
     --text-width: 100%;
     --text-width-tablet: 90%;
   }
