@@ -167,13 +167,6 @@
   background-color: #003459;
   text-align: left;
   color: #cecece;
-
-  /* 
-    @include space-between-p-tags();
-    @media #{$tablet} {
-      padding-top: 7.5vh;
-      padding-bottom: 7.5vh;
-    } */
 }
 
 .postHeadline > h1 {
@@ -202,16 +195,18 @@
   display: flex;
   flex-flow: column;
   padding: var(--padding);
+  padding-top: calc(var(--padding) / 2);
   justify-content: center;
   align-items: flex-start;
   background-color: #f1f1f1;
   text-align: left;
-  /* 
-    @include space-between-p-tags();
-    @media #{$tablet} {
-      padding-top: 7.5vh;
-      padding-bottom: 7.5vh;
-    } */
+}
+.post > h2 {
+  width: 75%;
+  text-align: left;
+  font-weight: bold;
+  font-size: var(--fluid-type-h2);
+  line-height: 1.2em;
 }
 
 .post > ul {
@@ -231,7 +226,7 @@
 .post > p {
   margin: 0;
   padding: 0;
-  width: 75%;
+  width: 100%;
   color: #003459;
   text-align: left;
   font-weight: bold;
@@ -239,8 +234,14 @@
   font-weight: 400;
 }
 
+@media (min-width: 900px) {
+  .post > p {
+    width: 64%;
+  } 
+}
+
 .post > p {
-  margin-bottom: calc(var(--padding) / 2)
+  margin-bottom: calc(var(--text-padding))
 }
 
 .post > p:last-child {
