@@ -7,14 +7,13 @@ const List = ({ list }: { list: Posts }) => (
   <>
     {list && (
       <ul className={styles.main}>
-        {list.map(({ id, date, title }) => (
+        {list.map(({ id, title, url, created }) => (
           <li className={styles.item} key={id}>
-            <Link href='/posts/[id]' as={`/posts/${id}`}>
+            <Link href='/posts/[id]' as={`/posts/${url}`}>
               <a>{title}</a>
             </Link>
-            <br />
             <small>
-              <Date dateString={date} />
+              <Date dateString={created} />
             </small>
           </li>
         ))}
