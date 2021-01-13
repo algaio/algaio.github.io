@@ -1,6 +1,14 @@
-import { parseISO, format } from 'date-fns'
+import { format, toDate } from "date-fns";
 
-export default function Date({ dateString } : {dateString: string}) {
-  const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'EEEE, do LLLL, yyyy')}</time>
+interface DateProps {
+  dateString: number | null;
+}
+
+export default function Date({ dateString }: DateProps) {
+  const dateObject = toDate(dateString!)
+  return (
+    <time dateTime={String(dateString)}>
+      {format(dateObject, "EEEE, do LLLL, yyyy")}
+    </time>
+  );
 }
