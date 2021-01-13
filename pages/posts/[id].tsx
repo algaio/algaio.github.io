@@ -4,7 +4,6 @@ import { getAllPostIds, getPost } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/Date";
 import Segment from "../../components/Segment";
-import utilStyles from "../../styles/utils.module.css";
 import * as PostTypes from "../../types/posts";
 import segmentStyles from "../../components/Segment/segment.module.css";
 
@@ -17,7 +16,7 @@ export default function Post({ Post }: { Post: PostTypes.Post }) {
       <article>
         <Segment type='postHeadline'>
           <h1>{Post.title}</h1>
-          <Date dateString={Post.date} />
+          <Date dateString={Post.created} />
         </Segment>
         {Post.contentHtml && (
           <section
