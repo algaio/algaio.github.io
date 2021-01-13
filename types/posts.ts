@@ -1,9 +1,11 @@
 export type Post = {
-  [index: string]: string | null | undefined;
+  [index: string]: any | null;
   id: string;
-  content: string;
   title: string;
-  date: string;
+  desc: string
+  updated: number;
+  created: number;
+  content: string;
   contentHtml?: string;
 };
 
