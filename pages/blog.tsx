@@ -22,7 +22,6 @@ export default function Blog({
   segments: Segments;
   posts: Posts;
 }) {
-  console.log("posts", posts);
   return (
     <Layout home={false}>
       <Head>
