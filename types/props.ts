@@ -1,5 +1,5 @@
 import { Segments } from "./segments";
-import { Posts } from "./posts";
+import { Posts, Post } from "./posts";
 
 export type TDateProps = {
   dateString: number | null;
@@ -22,4 +22,8 @@ export type TSegmentProps = {
   contentHtml?: string;
   id?: string;
   type: string;
+};
+
+export type TPostProps = {
+  Post: Post;
 };
