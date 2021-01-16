@@ -1,39 +1,32 @@
 // Modules
 import Head from "next/head";
+import { FunctionComponent } from "react";
+import { GetStaticProps } from "next";
 
 // Components
-import Layout, { siteTitle } from "../components/Layout";
-import List from "../components/List";
-import Segment from "../components/Segment";
+import { Layout } from "../components/Layout";
+import { List } from "../components/List";
+import { Segment } from "../components/Segment";
 
 // Data
 import { getSortedPosts } from "../lib/posts";
 import { getSortedSegments } from "../lib/segments";
+import { siteTitle } from "../lib/config";
 
 // TS
-import { Segments } from "../types/segments";
-import { Posts } from "../types/posts";
-import { GetStaticProps } from "next";
+import { TBlogProps } from "../types/props";
 
-export default function Blog({
-  segments,
-  posts,
-}: {
-  segments: Segments;
-  posts: Posts;
-}) {
-  return (
-    <Layout home={false}>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      {segments.map((segment: any) => (
-        <Segment {...segment} key={segment.id} />
-      ))}
-      <List list={posts} />
-    </Layout>
-  );
-}
+export const Blog: FunctionComponent<TBlogProps> = ({ segments, posts }) => (
+  <Layout home={false}>
+    <Head>
+      <title>{siteTitle}</title>
+    </Head>
+    {segments.map((segment: any) => (
+      <Segment {...segment} key={segment.id} />
+    ))}
+    <List list={posts} />
+  </Layout>
+);
 
 export const getStaticProps: GetStaticProps = async () => {
   const segments = await getSortedSegments("blog");

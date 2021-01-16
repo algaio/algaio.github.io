@@ -2,7 +2,7 @@ export type Post = {
   [index: string]: any | null;
   id: string;
   title: string;
-  desc: string
+  desc: string;
   updated: number;
   created: number;
   content: string;
