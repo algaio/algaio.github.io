@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with: 
           persist-credentials: false
-      - name: Cache Modules
+      - name: Cache Node modules
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
@@ -24,7 +24,12 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Install
-        run: npm i 
+        run: npm install --no-save
+      - name: Check NextJS build cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
       - name: Build
         run: npm run build
       - name: Export to static files
