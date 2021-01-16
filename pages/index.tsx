@@ -1,26 +1,30 @@
+import { FunctionComponent } from "react";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
 // Components
-import Segment from "../components/Segment";
-import Layout, { siteTitle } from "../components/Layout";
+import { Segment } from "../components/Segment";
+import { Layout } from "../components/Layout";
 
 // Data
+import { siteTitle } from "../lib/config";
 import { getSortedSegments } from "../lib/segments";
 
 // TS
-import { Segments } from "../types/segments";
+import { THomeProps } from "../types/props";
 
-export default function Home({ allSegments }: { allSegments: Segments }) {
-  return <Layout home>
+const Home: FunctionComponent<THomeProps> = ({ allSegments }) => (
+  <Layout home>
     <Head>
       <title>{siteTitle}</title>
     </Head>
     {allSegments.map((segment) => (
       <Segment {...segment} key={segment.id} />
     ))}
-  </Layout>;
-}
+  </Layout>
+);
+
+export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const allSegments = await getSortedSegments("home");

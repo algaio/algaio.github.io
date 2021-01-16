@@ -27,3 +27,7 @@ export type TSegmentProps = {
 export type TPostProps = {
   Post: Post;
 };
+
+export type THomeProps = {
+  allSegments: Segments;
+};
