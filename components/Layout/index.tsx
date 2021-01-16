@@ -1,23 +1,16 @@
 import { FunctionComponent } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { Nav } from "../Nav";
+import { TLayoutProps } from "../../types/props";
+import { siteTitle, siteMetaDesc } from "../../lib/config";
 import styles from "./layout.module.css";
-import Nav from "../Nav";
 
-export const siteTitle = "Alan Ionita - Fullstack developer from Manchester 🇬🇧";
-
-type LayoutProps = {
-  home: boolean;
-};
-
-const Layout: FunctionComponent<LayoutProps> = ({ children, home }) => (
+export const Layout: FunctionComponent<TLayoutProps> = ({ children, home }) => (
   <div className={styles.container}>
     <Head>
       <link rel='icon' href='/favicon.ico' />
-      <meta
-        name='description'
-        content='Learn how to build a personal website using Next.js'
-      />
+      <meta name='description' content={siteMetaDesc} />
       {/* <meta
         property='og:image'
         // content={`https://og-image.now.sh/${encodeURI(siteTitle)}.png`}
@@ -47,5 +40,3 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, home }) => (
     <main>{children}</main>
   </div>
 );
-
-export default Layout;
