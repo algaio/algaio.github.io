@@ -12,6 +12,7 @@ jobs:
         with: 
           persist-credentials: false
       - name: Cache Modules
+        uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
         with:
