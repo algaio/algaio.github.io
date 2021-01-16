@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import styles from "./nav.module.css";
 
-const Nav: FunctionComponent = ({ children }) => (
+export const Nav: FunctionComponent = ({ children }) => (
   <nav className={styles.main}>
     {children}
     {/* {props.pathname === "/articles/" ? (
@@ -11,5 +11,3 @@ const Nav: FunctionComponent = ({ children }) => (
     )} */}
   </nav>
 );
-
-export default Nav;
