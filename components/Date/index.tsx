@@ -1,11 +1,8 @@
 import { format, toDate } from "date-fns";
+import { TDateProps } from "../../types/props";
 
-interface DateProps {
-  dateString: number | null;
-}
-
-export default function Date({ dateString }: DateProps) {
-  const dateObject = toDate(dateString!)
+export function Date({ dateString }: TDateProps) {
+  const dateObject = toDate(dateString!);
   return (
     <time dateTime={String(dateString)}>
       {format(dateObject, "EEEE, do LLLL, yyyy")}
