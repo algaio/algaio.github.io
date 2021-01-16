@@ -17,3 +17,9 @@ export type TBlogProps = {
 export type TListProps = {
   list: Posts;
 };
+
+export type TSegmentProps = {
+  contentHtml?: string;
+  id?: string;
+  type: string;
+};

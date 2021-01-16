@@ -1,31 +1,21 @@
-import { FunctionComponent, ReactNode } from "react";
+import { FunctionComponent } from "react";
+import { TSegmentProps } from "../../types/props";
 import styles from "./segment.module.css";
 
-interface Props {
-  contentHtml?: string;
-  id?: string;
-  type: string;
-  children?: ReactNode;
-}
-
-const Segment: FunctionComponent<Props> = ({
+export const Segment: FunctionComponent<TSegmentProps> = ({
   contentHtml,
   children,
   type,
-}: Props) => {
-  return (
-    <>
-      {contentHtml && (
-        <section
-          className={styles[type] || styles.main}
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-        />
-      )}
-      {!contentHtml && (
-        <section className={styles[type] || styles.main}>{children}</section>
-      )}
-    </>
-  );
-};
-
-export default Segment;
+}) => (
+  <>
+    {contentHtml && (
+      <section
+        className={styles[type] || styles.main}
+        dangerouslySetInnerHTML={{ __html: contentHtml }}
+      />
+    )}
+    {!contentHtml && (
+      <section className={styles[type] || styles.main}>{children}</section>
+    )}
+  </>
+);
