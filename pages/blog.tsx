@@ -16,7 +16,7 @@ import { siteTitle } from "../lib/config";
 // TS
 import { TBlogProps } from "../types/props";
 
-export const Blog: FunctionComponent<TBlogProps> = ({ segments, posts }) => (
+const Blog: FunctionComponent<TBlogProps> = ({ segments, posts }) => (
   <Layout home={false}>
     <Head>
       <title>{siteTitle}</title>
@@ -27,6 +27,8 @@ export const Blog: FunctionComponent<TBlogProps> = ({ segments, posts }) => (
     <List list={posts} />
   </Layout>
 );
+
+export default Blog;
 
 export const getStaticProps: GetStaticProps = async () => {
   const segments = await getSortedSegments("blog");

@@ -8,7 +8,7 @@ import { getAllPostIds, getPost } from "../../lib/posts";
 import { TPostProps } from "../../types/props";
 import segmentStyles from "../../components/Segment/segment.module.css";
 
-export const Post: FunctionComponent<TPostProps> = ({ Post }) => (
+const Post: FunctionComponent<TPostProps> = ({ Post }) => (
   <Layout home={false}>
     <Head>
       <title>{Post.title}</title>
@@ -27,6 +27,8 @@ export const Post: FunctionComponent<TPostProps> = ({ Post }) => (
     </article>
   </Layout>
 );
+
+export default Post;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
