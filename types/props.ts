@@ -13,3 +13,7 @@ export type TBlogProps = {
   segments: Segments;
   posts: Posts;
 };
+
+export type TListProps = {
+  list: Posts;
+};

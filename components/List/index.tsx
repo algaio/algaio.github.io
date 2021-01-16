@@ -1,9 +1,10 @@
+import { FunctionComponent } from "react"
 import Link from "next/link";
-import { Posts } from "../../types/posts";
-import Date from "../Date";
+import { Date } from "../Date";
+import { TListProps } from "../../types/props";
 import styles from "./list.module.css";
 
-const List = ({ list }: { list: Posts }) => (
+export const List: FunctionComponent<TListProps> = ({ list }) => (
   <>
     {list && (
       <ul className={styles.main}>
@@ -22,5 +23,3 @@ const List = ({ list }: { list: Posts }) => (
     {list && list.length < 1 && <p>No available articles, but stay tuned!</p>}
   </>
 );
-
-export default List;
