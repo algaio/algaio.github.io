@@ -34,6 +34,6 @@ export async function getSortedSegments(page: string) {
 }
 
 export async function getSegmentHTML(content: string) {
-  const processedContent = await remark().use(html).process(content);
+  const processedContent = await remark().use(html, {sanitize: true}).process(content);
   return processedContent.toString();
 }
