@@ -112,6 +112,7 @@ npm run export
 
 ## Acknowledgments
 -------------
+- [Harm Putman: blockquote style](https://codepen.io/harmputman/pen/IpAnb)
 
 
 ## See Also
