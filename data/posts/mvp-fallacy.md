@@ -18,7 +18,7 @@ As an R&D developer, I've seen it too often and there is no real solution to it 
 
 MVPs allow us to prove a point, solve a problem, and then get the funding for it. That feature should not be considered 'done' until we've received the tender and redesigned the solution.
 
-When it comes to R&D project I like to think of the build through the lens of [Martin Kleppmann's ]() maintainbility principles: Evolvability, Simplicity, and Operability.
+When it comes to R&D project I like to think of the build through the lens of [Martin Kleppmann's ](https://martin.kleppmann.com/) maintainbility principles: Evolvability, Simplicity, and Operability.
 
 ## Evolvability
 
